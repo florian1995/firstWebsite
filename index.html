@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<title>Nature One - Home</title>
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <link rel="stylesheet" href="main.css">
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>
-        // Erst starten wenn das Dokument fertig geladen ist.
         $(document).ready(function(){ 
-            // Beim ersten Laden muss eine Seite geladen werden.
             $(".content").load("home.html");
-			console.log("Test");
  
-            // WENN auf einen Link innerhalb von .fn-nav geklickt wurde, DANN führe diese Funktion aus.
+            var current = "home";
+            
             $('.nav-pills a').click(function(e){
-                // Verhindert, dass der Browser die Seite beim Klick auf einen Link neulädt.
                 e.preventDefault(); 
  
-                // Speichert den Inhalt des Attributes in der Variablen site.
                 var site = $(this).data('site'); 
- 
-                // .html an den Namen anhängen.
-                site = site + '.html'; 
-                 
-				 
-				console.log(site);
-                // Seite laden und in .content einsetzen.
-                $(".content").load(site); 
+                
+                if(site === "codecademy") {
+              
+                	window.open("http://codecademy.com/florian-platte", "_blank");
+                } else {
+                	
+	                document.getElementById(current).setAttribute("class", document.getElementById(current).getAttribute("class").substring(7));
+	                document.getElementById(site).setAttribute("class", "active " + document.getElementById(site).getAttribute("class"));
+	                
+	                current = site;
+	                document.title = "Nature One - " + site.substring(0, 1).toUpperCase() + site.substring(1);
+	                site = site + '.html'; 
+	                $(".content").load(site); 
+                }
             });
         });
 	</script>
@@ -38,12 +41,12 @@
     <div class="nav">
       <div class="container">
         <ul class="nav nav-pills">
-          <li class="active"><a data-site="home" href="#">Home</a></li>
-          <li><a data-site="beispiel" href="#">Preise</a></li>
-		  <li><a data-site="bilder" href="#">Bilder</a></li>
-          <li class="pull-right"><a href="#">Registrieren</a></li>
-          <li class="pull-right"><a href="#">Anmelden</a></li>
-          <li class="pull-right"><a data-site="impressum" href="#">Impessum</a></li>
+          <li id="home" class="active"><a data-site="home" href="#">Home</a></li>
+          <li id="beispiel"><a data-site="beispiel" href="#">Preise</a></li>
+		  <li id="bilder"><a data-site="bilder" href="#">Bilder</a></li>
+          <li class="pull-right"><a data-site="codecademy" href="#">Codecademy</a></li>
+          <li class="pull-right"><a href="#">Platzhalter</a></li>
+          <li id="impressum" class="pull-right"><a data-site="impressum" href="#">Impessum</a></li>
         </ul>
       </div>
     </div>
@@ -82,7 +85,7 @@
 	  </div>
 	</div>
 	<div id="footer">
-		<p>CC Florian Platte</p>
+		<p>&copy; Florian Platte</p>
 	</div>
 	
   </body>
