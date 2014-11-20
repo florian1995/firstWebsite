@@ -45,6 +45,7 @@ function changeSite(current, site) {
 					
 		window.history.pushState(current, "Nature One - " + site.substring(0, 1).toUpperCase() + site.substring(1), "?site=" + current);
     }
+	return current;
 }
 
 $(document).ready(function(){ 
