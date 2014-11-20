@@ -25,6 +25,7 @@ article {
 
 .nav {
 	background-color: #81BEF7;
+	margin: 5px 0 5px 0;
 }
 
 .jumbotron {
@@ -69,7 +70,7 @@ article {
 }
 
 .content {
-	min-height: 175px;
+	min-height: 300px;
 }
 
 .content h2 {
