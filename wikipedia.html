@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	
+	<div class="container">
+		<br>
+		<img src="http://upload.wikimedia.org/wikipedia/commons/0/0b/Wikipedia_240x60.png"
+		border="0" alt="wikipedia - die freie enzyklopädie" align="middle"
+		width="240" height="60" /></a> 
+		<h2>Artikelsuche</h2>
+		<form action="http://de.wiktionary.org/wiki/Spezial:Suche" onsubmit="this.action = 'http://'+this.uselang.options[this.uselang.selectedIndex].title+'/'+this.search.value" target="_blank">
+		<select name="uselang">
+		<option selected="selected" title="de.wikipedia.org/wiki/Spezial:Suche" value="de">Wikipedia</option>
+		<option title="de.wiktionary.org/wiki/Spezial:Suche" value="de">Wiktionary</option>
+		<option title="commons.wikimedia.org/wiki/Special:Search" value="de">Commons</option>
+		<option title="de.wikibooks.org/wiki/Spezial:Suche" value="de">Wikibooks</option>
+		<option title="de.wikiquote.org/wiki/Spezial:Suche" value="de">Wikiquote</option>
+		<option title="de.wikinews.org/wiki/Spezial:Suche" value="de">Wikinews</option>
+		</select>
+		<input type="text" name="search" size="20" />
+		<input type="submit" value="Suchen" />
+		</form>
+		
+		<h2>Volltextsuche</h2>
+		<form action="http://de.wiktionary.org/wiki/Spezial:Suche" onsubmit="this.action = 'http://'+this.fulltext.options[this.fulltext.selectedIndex].title+'/'+this.search.value" target="_blank">
+		<select name="fulltext">
+		<option selected="selected" title="de.wikipedia.org/wiki/Spezial:Suche" value="de">Wikipedia</option>
+		<option title="de.wiktionary.org/wiki/Spezial:Suche" value="de">Wiktionary</option>
+		<option title="commons.wikimedia.org/wiki/Special:Search" value="de">Commons</option>
+		<option title="de.wikibooks.org/wiki/Spezial:Suche" value="de">Wikibooks</option>
+		<option title="de.wikiquote.org/wiki/Spezial:Suche" value="de">Wikiquote</option>
+		<option title="de.wikinews.org/wiki/Spezial:Suche" value="de">Wikinews</option>
+		</select>
+		<input type="text" name="search" size="40" />
+		<input type="submit" value="Suchen" />
+		</form>
+	</div>
+</body>
+</html>
