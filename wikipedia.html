@@ -8,13 +8,13 @@
 	
 	<div class="container">
 		<br>
-		<label for="search"> </label>
 		<img src="http://upload.wikimedia.org/wikipedia/commons/0/0b/Wikipedia_240x60.png"
 		border="0" alt="wikipedia - die freie enzyklopädie" align="middle"
-		width="240" height="60" /></a> 
+		width="240" height="60" alt="Ein Wikipedia Logo"/></a> 
 		<h2>Artikelsuche</h2>
 		<form action="http://de.wiktionary.org/wiki/Spezial:Suche" onsubmit="this.action = 'http://'+this.uselang.options[this.uselang.selectedIndex].title+'/'+this.search.value" target="_blank">
-		<select title="select" name="uselang">
+		<label for="select1">&nbsp;</label>
+		<select title="select" name="uselang" id="select1">
 		<option selected="selected" title="de.wikipedia.org/wiki/Spezial:Suche" value="de">Wikipedia</option>
 		<option title="de.wiktionary.org/wiki/Spezial:Suche" value="de">Wiktionary</option>
 		<option title="commons.wikimedia.org/wiki/Special:Search" value="de">Commons</option>
@@ -22,13 +22,16 @@
 		<option title="de.wikiquote.org/wiki/Spezial:Suche" value="de">Wikiquote</option>
 		<option title="de.wikinews.org/wiki/Spezial:Suche" value="de">Wikinews</option>
 		</select>
+		<label for="search">&nbsp;</label>
 		<input title="Textfeld" type="text" name="search" size="20" id="search" />
-		<input title="Button" type="submit" value="Suchen" id="search" />
+		<label for="search2">&nbsp;</label>
+		<input title="Button" type="submit" value="Suchen" id="search1" />
 		</form>
 		
 		<h2>Volltextsuche</h2>
 		<form action="http://de.wiktionary.org/wiki/Spezial:Suche" onsubmit="this.action = 'http://'+this.fulltext.options[this.fulltext.selectedIndex].title+'/'+this.search.value" target="_blank">
-		<select title="select" name="fulltext">
+		<label for="select2">&nbsp;</label>
+		<select title="select" name="fulltext" id="select2">
 		<option selected="selected" title="de.wikipedia.org/wiki/Spezial:Suche" value="de">Wikipedia</option>
 		<option title="de.wiktionary.org/wiki/Spezial:Suche" value="de">Wiktionary</option>
 		<option title="commons.wikimedia.org/wiki/Special:Search" value="de">Commons</option>
@@ -36,8 +39,10 @@
 		<option title="de.wikiquote.org/wiki/Spezial:Suche" value="de">Wikiquote</option>
 		<option title="de.wikinews.org/wiki/Spezial:Suche" value="de">Wikinews</option>
 		</select>
-		<input title="Textfeld" type="text" name="search" size="40" id="search" />
-		<input title="Button" type="submit" value="Suchen" id="search" />
+		<label for="search3">&nbsp;</label>
+		<input title="Textfeld" type="text" name="search" size="40" id="search2" />
+		<label for="search4">&nbsp;</label>
+		<input title="Button" type="submit" value="Suchen" id="search3" />
 		</form>
 	</div>
 </body>
