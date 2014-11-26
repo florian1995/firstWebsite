@@ -3,18 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Wikipedia-Suche</title>
+<link rel="stylesheet" href="css/wikipedia.css">
 </head>
 <body>
 	
 	<div class="container">
 		<br>
-		<img src="http://upload.wikimedia.org/wikipedia/commons/0/0b/Wikipedia_240x60.png"
-		border="0" alt="wikipedia - die freie enzyklopädie" align="middle"
-		width="240" height="60" alt="Ein Wikipedia Logo"/></a> 
+		<img src="http://upload.wikimedia.org/wikipedia/commons/0/0b/Wikipedia_240x60.png" alt="Ein Wikipedia Logo"/> 
 		<h2>Artikelsuche</h2>
 		<form action="http://de.wiktionary.org/wiki/Spezial:Suche" onsubmit="this.action = 'http://'+this.uselang.options[this.uselang.selectedIndex].title+'/'+this.search.value" target="_blank">
 		<label for="select1">&nbsp;</label>
-		<select title="select" name="uselang" id="select1">
+		<select title="select" name="uselang" id="select1" tabindex="7">
 		<option selected="selected" title="de.wikipedia.org/wiki/Spezial:Suche" value="de">Wikipedia</option>
 		<option title="de.wiktionary.org/wiki/Spezial:Suche" value="de">Wiktionary</option>
 		<option title="commons.wikimedia.org/wiki/Special:Search" value="de">Commons</option>
@@ -22,16 +21,16 @@
 		<option title="de.wikiquote.org/wiki/Spezial:Suche" value="de">Wikiquote</option>
 		<option title="de.wikinews.org/wiki/Spezial:Suche" value="de">Wikinews</option>
 		</select>
-		<label for="search">&nbsp;</label>
-		<input title="Textfeld" type="text" name="search" size="20" id="search" />
-		<label for="search2">&nbsp;</label>
-		<input title="Button" type="submit" value="Suchen" id="search1" />
+		<label for="search">|</label>
+		<input title="Textfeld" type="text" name="search" size="20" id="search" tabindex="8" />
+		<label for="search1">|</label>
+		<input title="Button" type="submit" value="Suchen" id="search1" tabindex="9"/>
 		</form>
 		
 		<h2>Volltextsuche</h2>
 		<form action="http://de.wiktionary.org/wiki/Spezial:Suche" onsubmit="this.action = 'http://'+this.fulltext.options[this.fulltext.selectedIndex].title+'/'+this.search.value" target="_blank">
 		<label for="select2">&nbsp;</label>
-		<select title="select" name="fulltext" id="select2">
+		<select title="select" name="fulltext" id="select2" tabindex="10">
 		<option selected="selected" title="de.wikipedia.org/wiki/Spezial:Suche" value="de">Wikipedia</option>
 		<option title="de.wiktionary.org/wiki/Spezial:Suche" value="de">Wiktionary</option>
 		<option title="commons.wikimedia.org/wiki/Special:Search" value="de">Commons</option>
@@ -39,10 +38,10 @@
 		<option title="de.wikiquote.org/wiki/Spezial:Suche" value="de">Wikiquote</option>
 		<option title="de.wikinews.org/wiki/Spezial:Suche" value="de">Wikinews</option>
 		</select>
-		<label for="search3">&nbsp;</label>
-		<input title="Textfeld" type="text" name="search" size="40" id="search2" />
-		<label for="search4">&nbsp;</label>
-		<input title="Button" type="submit" value="Suchen" id="search3" />
+		<label for="search2">|</label>
+		<input title="Textfeld" type="text" name="search" size="40" id="search2" tabindex="11"/>
+		<label for="search3">|</label>
+		<input title="Button" type="submit" value="Suchen" id="search3" tabindex="12"/>
 		</form>
 	</div>
 </body>
