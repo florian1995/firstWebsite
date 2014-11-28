@@ -11,7 +11,7 @@
 		<img src="http://upload.wikimedia.org/wikipedia/commons/0/0b/Wikipedia_240x60.png" alt="Ein Wikipedia Logo"/> 
 		<h2>Artikelsuche</h2>
 		<form action="http://de.wiktionary.org/wiki/Spezial:Suche" onsubmit="this.action = 'http://'+this.uselang.options[this.uselang.selectedIndex].title+'/'+this.search.value" target="_blank">
-		<label for="select1">&nbsp;</label>
+		<label for="select1">Suche in</label>
 		<select title="select" name="uselang" id="select1" tabindex="7">
 		<option selected="selected" title="de.wikipedia.org/wiki/Spezial:Suche" value="de">Wikipedia</option>
 		<option title="de.wiktionary.org/wiki/Spezial:Suche" value="de">Wiktionary</option>
@@ -20,15 +20,14 @@
 		<option title="de.wikiquote.org/wiki/Spezial:Suche" value="de">Wikiquote</option>
 		<option title="de.wikinews.org/wiki/Spezial:Suche" value="de">Wikinews</option>
 		</select>
-		<label for="search">|</label>
+		<label for="search">Artikelsuche Suchfeld</label>
 		<input title="Textfeld" type="text" name="search" size="20" id="search" tabindex="8" />
-		<label for="search1">|</label>
 		<input title="Button" type="submit" value="Suchen" id="search1" tabindex="9"/>
 		</form>
 		
 		<h2>Volltextsuche</h2>
 		<form action="http://de.wiktionary.org/wiki/Spezial:Suche" onsubmit="this.action = 'http://'+this.fulltext.options[this.fulltext.selectedIndex].title+'/'+this.search.value" target="_blank">
-		<label for="select2">&nbsp;</label>
+		<label for="select2">Suche in</label>
 		<select title="select" name="fulltext" id="select2" tabindex="10">
 		<option selected="selected" title="de.wikipedia.org/wiki/Spezial:Suche" value="de">Wikipedia</option>
 		<option title="de.wiktionary.org/wiki/Spezial:Suche" value="de">Wiktionary</option>
@@ -37,9 +36,8 @@
 		<option title="de.wikiquote.org/wiki/Spezial:Suche" value="de">Wikiquote</option>
 		<option title="de.wikinews.org/wiki/Spezial:Suche" value="de">Wikinews</option>
 		</select>
-		<label for="search2">|</label>
+		<label for="search2">Volltextsuche Suchfeld</label>
 		<input title="Textfeld" type="text" name="search" size="40" id="search2" tabindex="11"/>
-		<label for="search3">|</label>
 		<input title="Button" type="submit" value="Suchen" id="search3" tabindex="12"/>
 		</form>
 	</div>
