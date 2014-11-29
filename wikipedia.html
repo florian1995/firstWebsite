@@ -4,42 +4,35 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Wikipedia-Suche</title>
 <link rel="stylesheet" href="css/wikipedia.css">
+<script type="text/javascript">
+
+function SetzeFocus() { 
+
+var ElementID = "textfeld-suche";
+document.getElementById(ElementID).focus(); 
+} 
+setTimeout("SetzeFocus()",500);
+
+</script>
 </head>
-<body>
+<body onload="document.search.textfeld-suche.focus();">
+	
 	<div class="container">
 		<br>
-		<img src="http://upload.wikimedia.org/wikipedia/commons/0/0b/Wikipedia_240x60.png" alt="Ein Wikipedia Logo"/> 
-		<h2>Artikelsuche</h2>
-		<form action="http://de.wiktionary.org/wiki/Spezial:Suche" onsubmit="this.action = 'http://'+this.uselang.options[this.uselang.selectedIndex].title+'/'+this.search.value" target="_blank">
-		<label for="select1">Suche in</label>
-		<select title="select" name="uselang" id="select1" tabindex="7">
-		<option selected="selected" title="de.wikipedia.org/wiki/Spezial:Suche" value="de">Wikipedia</option>
-		<option title="de.wiktionary.org/wiki/Spezial:Suche" value="de">Wiktionary</option>
-		<option title="commons.wikimedia.org/wiki/Special:Search" value="de">Commons</option>
-		<option title="de.wikibooks.org/wiki/Spezial:Suche" value="de">Wikibooks</option>
-		<option title="de.wikiquote.org/wiki/Spezial:Suche" value="de">Wikiquote</option>
-		<option title="de.wikinews.org/wiki/Spezial:Suche" value="de">Wikinews</option>
-		</select>
-		<label for="search">Artikelsuche Suchfeld</label>
-		<input title="Textfeld" type="text" name="search" size="20" id="search" tabindex="8" />
-		<input title="Button" type="submit" value="Suchen" id="search1" tabindex="9"/>
+		<img id="wikipedia-logo" src="http://upload.wikimedia.org/wikipedia/commons/0/0b/Wikipedia_240x60.png" alt="Ein Wikipedia Logo"/> 
+		<h2>Wikipedia Suche</h2>
+		<form id="search" name="search" method="post" action="http://de.wikipedia.org/wiki/Spezial:Suche" target="_blank">
+  			<div align="left">
+  				<label for="textfeld-suche">Textfeld für die Wikipedia Suche</label><br/>
+	   			<input type="text" name="search" size="30" id="textfeld-suche" tabindex="6"/>
+	    		<input type="submit" name="uselang" value="Artikel" tabindex="7"/>
+	    		<input type="submit" name="fulltext" value="Volltext" tabindex="8"/>
+  			</div>
 		</form>
-		
-		<h2>Volltextsuche</h2>
-		<form action="http://de.wiktionary.org/wiki/Spezial:Suche" onsubmit="this.action = 'http://'+this.fulltext.options[this.fulltext.selectedIndex].title+'/'+this.search.value" target="_blank">
-		<label for="select2">Suche in</label>
-		<select title="select" name="fulltext" id="select2" tabindex="10">
-		<option selected="selected" title="de.wikipedia.org/wiki/Spezial:Suche" value="de">Wikipedia</option>
-		<option title="de.wiktionary.org/wiki/Spezial:Suche" value="de">Wiktionary</option>
-		<option title="commons.wikimedia.org/wiki/Special:Search" value="de">Commons</option>
-		<option title="de.wikibooks.org/wiki/Spezial:Suche" value="de">Wikibooks</option>
-		<option title="de.wikiquote.org/wiki/Spezial:Suche" value="de">Wikiquote</option>
-		<option title="de.wikinews.org/wiki/Spezial:Suche" value="de">Wikinews</option>
-		</select>
-		<label for="search2">Volltextsuche Suchfeld</label>
-		<input title="Textfeld" type="text" name="search" size="40" id="search2" tabindex="11"/>
-		<input title="Button" type="submit" value="Suchen" id="search3" tabindex="12"/>
-		</form>
+		<br/>
+		<a href="http://wave.webaim.org/report#/florianplattewebsite.cloudcontrolled.com/wikipedia.html" target="_blank" title="WAVE Tool Check">
+  						<img src="http://www.w3.org/WAI/wcag2AAA" alt="Level Triple-A conformance, W3C WAI Web Content Accessibility Guidelines 2.0">
+  					</a>
 	</div>
 </body>
 </html>

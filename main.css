@@ -13,7 +13,7 @@ article {
 
 .nav a {
 	color: #5a5a5a;
-	font-size: 11px;
+	font-size: 14px;
 	font-weight: bold;
 	padding: 14px 10px;
 	text-transform: uppercase;
@@ -70,7 +70,7 @@ article {
 }
 
 .content {
-	min-height: 300px;
+	min-height: 400px;
 }
 
 .content h2 {
@@ -95,17 +95,29 @@ article {
 
 #bilderhtml h1 {
 	text-align: center;
-	font-family: Comic Sans MS;
-	color: grey;
+	font-family: Comic sans ms;
+	text-transform: uppercase;
+	color: #5a5a5a;
+}
+.carousel-caption h2 {
+	color: white;
 }
 
 hr {
 	border-width: 2px;
-	border-color: grey;
+	border-color: #5a5a5a;
 	
 }
 
 .carousel-inner img {
 	heigth: 300px;
 	width: 100%;
+}
+
+.col-md-6 h1 {
+	color: #5a5a5a;
+}
+
+.col-md-4 h3 {
+	color: #5a5a5a;
 }

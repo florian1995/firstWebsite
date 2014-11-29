@@ -29,22 +29,17 @@ function loadSiteFromURL() {
 }
 		
 function changeSite(current, site) {
-			
-	if(site === "codecademy") {
-              
-        window.open("http://codecademy.com/florian-platte", "_blank");
-    } else {
                 	
-	    document.getElementById(current).setAttribute("class", document.getElementById(current).getAttribute("class").substring(7));
-	    document.getElementById(site).setAttribute("class", "active " + document.getElementById(site).getAttribute("class"));
+	document.getElementById(current).setAttribute("class", document.getElementById(current).getAttribute("class").substring(7));
+	document.getElementById(site).setAttribute("class", "active " + document.getElementById(site).getAttribute("class"));
 	                
-	    current = site;
-	    document.title = "Nature One - " + site.substring(0, 1).toUpperCase() + site.substring(1);
-	    site = site + '.html'; 
-	    $(".content").load(site); 
+	current = site;
+	document.title = "Nature One - " + site.substring(0, 1).toUpperCase() + site.substring(1);
+	site = site + '.html'; 
+	$(".content").load(site); 
 					
-		window.history.pushState(current, "Nature One - " + site.substring(0, 1).toUpperCase() + site.substring(1), "?site=" + current);
-    }
+	window.history.pushState(current, "Nature One - " + site.substring(0, 1).toUpperCase() + site.substring(1), "?site=" + current);
+		
 	return current;
 }
 
