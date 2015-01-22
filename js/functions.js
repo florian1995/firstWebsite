@@ -22,6 +22,7 @@ function loadSiteFromURL() {
 		current = "home";
 	}
     $(".content").load(current + ".html");
+    
  
     document.getElementById(current).setAttribute("class", "active " + document.getElementById(current).getAttribute("class"));
 			
@@ -35,8 +36,9 @@ function changeSite(current, site) {
 	                
 	current = site;
 	document.title = "Nature One - " + site.substring(0, 1).toUpperCase() + site.substring(1);
-	site = site + '.html'; 
-	$(".content").load(site); 
+	site = site + '.html';
+	$(".content").load(site);
+	
 					
 	window.history.pushState(current, "Nature One - " + site.substring(0, 1).toUpperCase() + site.substring(1), "?site=" + current);
 		
@@ -60,10 +62,11 @@ $(document).ready(function(){
 			
     $('.nav-pills a').click(function(e){
  
-	e.preventDefault();
+    	e.preventDefault();
  
 		var site = $(this).data('site'); 
-                
+
+		
 		current = changeSite(current, site);
 	});
 			

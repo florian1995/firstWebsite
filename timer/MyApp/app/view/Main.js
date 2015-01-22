@@ -237,8 +237,10 @@ Ext.define('MyApp.view.Main', {
                                 value: 1200
                             }]// data
                             
+                            
                            
                         }], // slots
+                        
                         listeners: {
                             change: function (picker, value, oldValue) {
                                
@@ -253,6 +255,7 @@ Ext.define('MyApp.view.Main', {
                             } // change
                         } // listeners
                     }); // create()
+                    picker.setValue({time: 600}, true);
                     
                    Ext.Viewport.add(stopButton);
                    Ext.Viewport.add(topToolbar);
