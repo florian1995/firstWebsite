@@ -33,16 +33,18 @@ Ext.define('MyApp.view.Main', {
                     		},
                     		
 	                    	items: [{
+	                    		
 	                    		xtype: 'button',
-	                    		title: 'Start',
+	                    		itemId: 'startButton',
+	                			title: 'Start',
 	                   			ui: 'action',
 	                   			text: 'Start',
-	                   			disabled: false,
+	                   			disabled: true,
 	                   			width: '22%',
 	                   			handler: function() {
 	                   				cdStart();
-	                   			}
-	                   		}, {
+	                   			}	
+	                    	}, {
 	                    		xtype: 'button',
 	                    		title: 'Pause',
 	                   			ui: 'action',
@@ -59,15 +61,13 @@ Ext.define('MyApp.view.Main', {
 	                   			width: '22%',
 	                   			handler: function() {
 	                   				cdReset();
+	                   				
 	                   			}
 	                   		}]
+	                   		
                     		
                     };
                     
-                    var startButton = {
-                    		
-                    };
-                	
                 	var topToolbar = {
                     		
                     		xtype: 'toolbar',
@@ -78,6 +78,7 @@ Ext.define('MyApp.view.Main', {
                                 text: 'set Timer',
                                 handler: function () {
                                     picker.show();
+                                    
                                     
                                 } // handler
                             }] // items
@@ -248,6 +249,9 @@ Ext.define('MyApp.view.Main', {
                         listeners: {
                             change: function (picker, value, oldValue) {
                                
+                            	var buttonStart = Ext.ComponentQuery.query('#startButton')[0];
+                                buttonStart.enable();
+                            	
                             	if(started) {
                             		
                             		cdPause();
@@ -260,7 +264,8 @@ Ext.define('MyApp.view.Main', {
                         } // listeners
                     }); // create()
                     picker.setValue({time: 600}, true);
-                    
+                   
+                   
                    Ext.Viewport.add(stopButton);
                    Ext.Viewport.add(topToolbar);
                    Ext.Viewport.add(dataView);
