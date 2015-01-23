@@ -69,5 +69,12 @@ $(document).ready(function(){
 		
 		current = changeSite(current, site);
 	});
-			
+    
+    $('.bxslider').bxSlider({
+    	nextSelector: '#slider-next',
+    	prevSelector: '#slider-prev',
+    	auto: true,
+    	autoHover: true,
+    	pause: 8000,
+    });
 });

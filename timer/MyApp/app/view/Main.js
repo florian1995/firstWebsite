@@ -37,7 +37,8 @@ Ext.define('MyApp.view.Main', {
 	                    		title: 'Start',
 	                   			ui: 'action',
 	                   			text: 'Start',
-	                   			width: '20%',
+	                   			disabled: false,
+	                   			width: '22%',
 	                   			handler: function() {
 	                   				cdStart();
 	                   			}
@@ -46,7 +47,7 @@ Ext.define('MyApp.view.Main', {
 	                    		title: 'Pause',
 	                   			ui: 'action',
 	                   			text: 'Pause',
-	                   			width: '20%',
+	                   			width: '22%',
 	                   			handler: function() {
 	                   				cdPause();
 	                   			}
@@ -55,11 +56,15 @@ Ext.define('MyApp.view.Main', {
 	                   			title: 'Reset',
 	                   			ui: 'action',
 	                   			text: 'Reset',
-	                   			width: '20%',
+	                   			width: '22%',
 	                   			handler: function() {
 	                   				cdReset();
 	                   			}
 	                   		}]
+                    		
+                    };
+                    
+                    var startButton = {
                     		
                     };
                 	
@@ -69,7 +74,7 @@ Ext.define('MyApp.view.Main', {
                             docked: 'top',
                             items: [{
                             	centered: true,
-                            	width: '90%',
+                            	width: '85%',
                                 text: 'set Timer',
                                 handler: function () {
                                     picker.show();
@@ -160,7 +165,6 @@ Ext.define('MyApp.view.Main', {
                     	
                     var dataView = Ext.create('Ext.DataView', {
                         fullscreen: true,
-                       
                         store: {
                             fields: ['time'],
                             data: [
@@ -168,7 +172,7 @@ Ext.define('MyApp.view.Main', {
                                ]
                         },
 
-                        itemTpl: '<div><center><br><br>{time}</center></div>'
+                        itemTpl: '<div><font size="20px"><center><br><br>{time}</center></font></div>'
                     });
                    
                     var picker = Ext.create('Ext.picker.Picker', {

@@ -28,30 +28,6 @@ article {
 	margin: 5px 0 5px 0;
 }
 
-.jumbotron {
-	background-image:url(Bilder/Bild_4.jpg);
-	height: 500px;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.jumbotron .container {
-	position: relative;
-	top:100px;
-}
-
-.jumbotron h1 {
-	color: #fff;
-	font-size: 48px;  
-	font-family: 'Shift', sans-serif;
-	font-weight: bold;
-}
-
-.jumbotron p {
-	font-size: 20px;
-	color: #fff;
-}
-
 .learn-more container {
 	position: absolute;
 	margin-bottom: 0;
@@ -126,4 +102,18 @@ hr {
 .col-md-4 h3 {
 	color: #5a5a5a;
 	
+}
+
+.bxslider {
+	width: 100%;
+}
+
+.bxslider img {
+	width: 100%;
+	max-height: 400px;
+}
+
+#slider {
+	width: 100%;
+	max-heigth: 400px;
 }
