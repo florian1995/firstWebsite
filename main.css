@@ -112,13 +112,13 @@ hr {
 
 .bxslider img {
 	width: 100%;
-	max-Width: 1400px;
-	max-height: 400px;
+	max-Width: 1600px;
+	max-height: 500px;
 }
 
 #slider {
 	width: 100%;
-	max-Width: 1400px;
-	max-heigth: 400px;
+	max-Width: 1600px;
+	max-heigth: 500px;
 	margin: auto;
 }
