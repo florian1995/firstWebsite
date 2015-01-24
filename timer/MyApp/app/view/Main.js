@@ -93,7 +93,7 @@ Ext.define('MyApp.view.Main', {
                     	  strZeit = parseTime(t);
                     	 
                     	  // Falls der Countdown noch nicht zurückgezählt ist
-                    	  if(time > 0)
+                    	  if(time > 1)
                     	  {
                     	    //Countdown-Funktion erneut aufrufen
                     	    //diesmal mit einer Sekunde weniger
@@ -101,17 +101,15 @@ Ext.define('MyApp.view.Main', {
                     		  x = setTimeout(function(){countdown(--time, id)}, 1000);
                     	    
                     	  }
-                    	  else
-                    	  {
+                    	  else if (time === 1) {
+                    		  countdown(--time, id);
+                    	  } else if (time === 0){
                     	    //führe eine funktion aus oder refresh die seite
                     	    //dieser Teil hier wird genau einmal ausgeführt und zwar 
                     	    //wenn die Zeit um ist.
                     	    strZeit = "Set me Baby one<br> more Time!";
                     	    
                     	    audio.play();
-                    	    audio.pause();
-                			audio.currentTime = 0;
-                			audio.play();
                     	    stopButton.show();
                     	   
                     	  }
