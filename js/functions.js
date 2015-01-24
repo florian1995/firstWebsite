@@ -76,5 +76,6 @@ $(document).ready(function(){
     	auto: true,
     	autoHover: true,
     	pause: 8000,
+    	autoControls: true,
     });
 });

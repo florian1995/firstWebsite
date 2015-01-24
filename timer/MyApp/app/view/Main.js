@@ -93,17 +93,14 @@ Ext.define('MyApp.view.Main', {
                     	  strZeit = parseTime(t);
                     	 
                     	  // Falls der Countdown noch nicht zurückgezählt ist
-                    	  if(time > 1)
+                    	  if(time > 0)
                     	  {
                     	    //Countdown-Funktion erneut aufrufen
                     	    //diesmal mit einer Sekunde weniger
                     		  
                     		  x = setTimeout(function(){countdown(--time, id)}, 1000);
                     	    
-                    	  }
-                    	  else if (time === 1) {
-                    		  countdown(--time, id);
-                    	  } else if (time === 0){
+                    	  } else {
                     	    //führe eine funktion aus oder refresh die seite
                     	    //dieser Teil hier wird genau einmal ausgeführt und zwar 
                     	    //wenn die Zeit um ist.
@@ -121,12 +118,19 @@ Ext.define('MyApp.view.Main', {
                     	var cdStart = function() {
                     		document.getElementById('beep').load();
                     		countdown(t,'ct1');
+                    		
+                    		var buttonStart = Ext.ComponentQuery.query('#startButton')[0];
+                            buttonStart.disable();
+                    		
                     	};
                     	
                     	var cdPause = function() {
                     		
                     		clearTimeout(x);
                     		started = false;
+                    		
+                    		var buttonStart = Ext.ComponentQuery.query('#startButton')[0];
+                            buttonStart.enable();
                     	};
                     	
                     	var cdReset = function() {

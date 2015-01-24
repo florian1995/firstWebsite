@@ -106,19 +106,19 @@ hr {
 
 .bxslider {
 	width: 100%;
-	max-width: 1600px;
+	
 	
 }
 
 .bxslider img {
 	width: 100%;
-	max-width: 1600px;
-	max-height: 500px;
+	max-Width: 1400px;
+	max-height: 400px;
 }
 
 #slider {
 	width: 100%;
-	max-width: 1600px;
-	max-heigth: 500px;
+	max-Width: 1400px;
+	max-heigth: 400px;
 	margin: auto;
 }
