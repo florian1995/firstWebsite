@@ -119,6 +119,7 @@ Ext.define('MyApp.view.Main', {
                     	};
                     	
                     	var cdStart = function() {
+                    		document.getElementById('beep').load();
                     		countdown(t,'ct1');
                     	};
                     	
