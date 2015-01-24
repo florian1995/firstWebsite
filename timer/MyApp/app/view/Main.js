@@ -109,6 +109,9 @@ Ext.define('MyApp.view.Main', {
                     	    strZeit = "Set me Baby one<br> more Time!";
                     	    
                     	    audio.play();
+                    	    audio.pause();
+                			audio.currentTime = 0;
+                			audio.play();
                     	    stopButton.show();
                     	   
                     	  }
