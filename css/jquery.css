@@ -1,0 +1,17 @@
+#animation {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #ABCDEF;
+}
+
+#explode {
+	height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #ABCDEF;
+}
+
+.active {
+    background-color:#556677;
+}
