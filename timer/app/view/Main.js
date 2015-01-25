@@ -93,11 +93,24 @@ Ext.define('MyApp.view.Main', {
                     	  strZeit = parseTime(t);
                     	 
                     	  // Falls der Countdown noch nicht zurückgezählt ist
+                    	 
+                    	  if(time === 180) {
+                    		  
+                    		  audio3m.play();
+                    		  
+                    	  }
+                    	  
+                    	  if(time === 60) {
+                    		  
+                    		  audio1m.play();
+                    		  
+                    	  }
+                    	  
                     	  if(time > 0)
                     	  {
                     	    //Countdown-Funktion erneut aufrufen
                     	    //diesmal mit einer Sekunde weniger
-                    		  
+                 
                     		  x = setTimeout(function(){countdown(--time, id)}, 1000);
                     	    
                     	  } else {
@@ -116,7 +129,10 @@ Ext.define('MyApp.view.Main', {
                     	};
                     	
                     	var cdStart = function() {
-                    		document.getElementById('beep').load();
+                    		
+                    		audio.load();
+                    		audio3m.load();
+                    		audio1m.load();
                     		countdown(t,'ct1');
                     		
                     		var buttonStart = Ext.ComponentQuery.query('#startButton')[0];
@@ -158,7 +174,9 @@ Ext.define('MyApp.view.Main', {
                       	  return strZeit;
                     	};
                     	
-                    var audio = document.getElementById('beep');
+                    var audio = document.getElementById('alert');
+                    var audio3m = document.getElementById('3minutes');
+                    var audio1m = document.getElementById('1minute');
                     
                     var stopButton = Ext.create('Ext.Button', {
                     		text: 'Stoppen',
