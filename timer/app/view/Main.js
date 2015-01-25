@@ -9,10 +9,10 @@ Ext.define('MyApp.view.Main', {
     
     
     config: {
-
+    	
         items: [
             {
-            	
+            	title: 'Timer',
                 styleHtmlContent: true,
                 scrollable: true,
 
@@ -63,9 +63,7 @@ Ext.define('MyApp.view.Main', {
 	                   				cdReset();
 	                   				
 	                   			}
-	                   		}]
-	                   		
-                    		
+	                   		}]	
                     };
                     
                 	var topToolbar = {
@@ -79,7 +77,6 @@ Ext.define('MyApp.view.Main', {
                                 handler: function () {
                                     picker.show();
                                     
-                                    
                                 } // handler
                             }] // items
                     };
@@ -87,12 +84,9 @@ Ext.define('MyApp.view.Main', {
                    var countdown = function (time,id){
                     	 
                 	   	  started = true;
-                    	  //time brauchen wir später noch
                     	  t = time;
                     	 
                     	  strZeit = parseTime(t);
-                    	 
-                    	  // Falls der Countdown noch nicht zurückgezählt ist
                     	 
                     	  if(time === 180) {
                     		  
@@ -108,22 +102,17 @@ Ext.define('MyApp.view.Main', {
                     	  
                     	  if(time > 0)
                     	  {
-                    	    //Countdown-Funktion erneut aufrufen
-                    	    //diesmal mit einer Sekunde weniger
-                 
+                    
                     		  x = setTimeout(function(){countdown(--time, id)}, 1000);
                     	    
                     	  } else {
-                    	    //führe eine funktion aus oder refresh die seite
-                    	    //dieser Teil hier wird genau einmal ausgeführt und zwar 
-                    	    //wenn die Zeit um ist.
+                    	    
                     	    strZeit = "Set me Baby one<br> more Time!";
                     	    
                     	    audio.play();
                     	    stopButton.show();
                     	   
                     	  }
-                    	  // Ausgabestring in Tag mit id="id" schreiben
                     	 
                     	  dataView.getStore().getAt(0).set('time', strZeit);
                     	};
@@ -265,9 +254,6 @@ Ext.define('MyApp.view.Main', {
                                 text: '20',
                                 value: 1200
                             }]// data
-                            
-                            
-                           
                         }], // slots
                         
                         listeners: {
@@ -288,7 +274,6 @@ Ext.define('MyApp.view.Main', {
                         } // listeners
                     }); // create()
                     picker.setValue({time: 600}, true);
-                   
                    
                    Ext.Viewport.add(stopButton);
                    Ext.Viewport.add(topToolbar);
