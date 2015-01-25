@@ -4,10 +4,13 @@ $(document).ready(function() {
         $('#animation').fadeOut('fast'); 
     });
 	
-	$('#explode').dblclick(function() {
-        $('#explode').effect("explode",1000); 
+	$('#animation2').dblclick(function() {
+        $('#animation').fadeIn('fast'); 
     });
-    
+	
+	$('.pull-me').click(function() {
+        $('.panel').slideToggle('slow');    
+    });
 	
 	
 });
